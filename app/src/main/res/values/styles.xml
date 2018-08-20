@@ -22,4 +22,13 @@
         <item name="android:background">@android:color/transparent</item>
 
     </style>
+
+    <style name="NoCapsTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabBackground">@drawable/tab_background</item>
+        <item name="tabTextAppearance">@style/NoCapsTextAppearance</item>
+    </style>
+
+    <style name="NoCapsTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+    </style>
 </resources>

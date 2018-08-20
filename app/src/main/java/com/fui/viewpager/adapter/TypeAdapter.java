@@ -1,19 +1,23 @@
-package com.fui.viewpager;
+package com.fui.viewpager.adapter;
 
+import android.app.Activity;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import java.util.List;
 
-public class TypeAdapter extends FragmentPagerAdapter {
-    private final String[] mTitles;
-    private List<Fragment> fragments;
+public abstract class TypeAdapter extends FragmentPagerAdapter {
+    protected final String[] mTitles;
+    protected List<Fragment> fragments;
+    protected Activity activity;
 
-    public TypeAdapter(FragmentManager fm,
+    public TypeAdapter(Activity activity,
+                       FragmentManager fm,
                        List<Fragment> fragments,
                        String[] titles) {
         super(fm);
+        this.activity = activity;
         this.fragments = fragments;
         mTitles = titles;
     }
@@ -29,7 +33,5 @@ public class TypeAdapter extends FragmentPagerAdapter {
     }
 
     @Override
-    public CharSequence getPageTitle(int position) {
-        return mTitles[position];
-    }
+    public abstract CharSequence getPageTitle(int position);
 }

@@ -41,10 +41,13 @@ public class MainActivity extends AppCompatActivity {
 
         ArrayList<String> list6 = new ArrayList();
         list6.add("大人肉");
+        list6.add("小孩肉");
         data2.put("人肉", list6);
 
         datas.put("水果", data);
         datas.put("肉", data2);
+        datas.put("肉1", data2);
+        datas.put("肉2", data2);
     }
 
     @Override
